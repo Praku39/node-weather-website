@@ -9,7 +9,7 @@ const forecast=(address, callback)=>{
         }else if(response.body.error){
             callback('unable to find location, Try another search', undefined);
         }else{
-            callback(undefined, response.body.current.weather_descriptions[0] + ' It is currently ' + response.body.current.temperature + ' degress out. There is a ' + response.body.current.feelslike + '% chance of rain.'
+            callback(undefined, response.body.current.weather_descriptions[0] + ' It is currently ' + response.body.current.temperature + ' degress out. There is a ' + response.body.current.feelslike + '% chance of rain. humidity is' +response.body.current.humidity
             )
         }
     })
